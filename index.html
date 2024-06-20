@@ -1,1 +1,48 @@
-Hello World
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8"/>
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0"/>
+    <meta http-equiv="X-UA-Compatible" content="ie=edge"/>
+    <title>Document</title>
+    <style>
+      html,
+      body
+    </style>
+</head>
+<body>
+<div style="display: flex; flex-direction: column; justify-content: center; align-items: center">
+    <h1>Game mock</h1>
+    <div id="startBanner" style="background-color: #ff9800; padding: 10px; color: white;">
+        To start, hit this button first.👇
+    </div>
+    <br/>
+    <input type="button" id="startGameButton" value="Start game" onClick="handleGameStart();"
+           style="margin-bottom: 18px; width: 220px"/>
+    <div id="endBanner" style="background-color: green; padding: 10px; color: white;" hidden>
+        Now insert the run end time in seconds.👇
+    </div>
+    <br/>
+
+    <div>
+        <input type="text" id="scoreInput" placeholder="Run end time"/>
+        <input id="endRunButton" disabled type="button" value="End run" onClick="handleGameEnd()"/>
+    </div>
+    <br/>
+    <div>
+        <table border id="eventTable">
+            <thead>
+            <tr>
+                <th style="width: 25%">event type</th>
+                <th>event data</th>
+            </tr>
+            </thead>
+            <tbody id="rows"></tbody>
+        </table>
+    </div>
+</div>
+</body>
+<script src="./index.js"></script>
+
+</html>
